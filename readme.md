@@ -18,4 +18,6 @@ Lancez le fichier main.py, et un navigateur devrait s'ouvrir sur la page de conn
 
 Le programme attend que vous vous connectiez, après quoi vous devez appuyer sur entrer dans le terminal.
 
+Sélectionnez un niveau dans le navigateur, et rappuyez sur entrer dans le terminal.
+
 Et c'est à peu près tout.
