@@ -13,6 +13,9 @@ Et installer les navigateurs nécessaires (nous utilisons Chromium, mais vous po
 playwright install
 ```
 
+# Avant garde
+Le bot a beaucoup de mal avec la logique et tout ce qui est contextuel, il stagnera donc beaucoup. Mais il accumulera des heures.
+
 # Utilisation
 Lancez le fichier main.py, et un navigateur devrait s'ouvrir sur la page de connexion de Projet Voltaire.
 

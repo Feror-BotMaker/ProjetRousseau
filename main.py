@@ -37,12 +37,13 @@ def run(playwright: Playwright) -> None:
                     page.query_selector(".retryButton.primaryButton").click()
                     sleep(randint(1, 3))
         except:
-            phrase = page.query_selector(".question").inner_text()
+            phraseHTML = page.query_selector(".question")
+            phrase = phraseHTML.inner_text()
             print(phrase)
             for message in grammalecte_text(phrase):
-                print(phrase[message.start:message.end], message.message)
+                print(phrase[message.start:message.end], '|', message.message)
                 try:
-                    page.get_by_text(phrase[message.start:message.end]).click()
+                    phraseHTML.get_by_text(phrase[message.start:message.end]).click()
                     break
                 except:
                     pass
@@ -51,9 +52,6 @@ def run(playwright: Playwright) -> None:
             sleep(randint(1, 3))
             page.get_by_role("button", name="Suivant").click()
             sleep(randint(1, 3))
-            '''page.get_by_text("arrivait").click()
-            page.get_by_role("button", name="Suivant").click()
-            page.get_by_text("peut").click()'''
 
     # ---------------------
     context.close()
